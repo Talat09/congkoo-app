@@ -33,6 +33,9 @@ app.use(express.static(path.join(__dirname, "/frontend")));
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "frontend", "index.html"));
 });
+app.get("/", (req, res) => {
+  res.send("Chat Api Running");
+});
 //server listen
 server.listen(PORT, () => {
   connectToDB();
