@@ -25,9 +25,7 @@ app.use(cookieParser()); //to parse the incoming request with cookies
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
-// app.get("/", (req, res) => {
-//   res.send("Api Running");
-// });
+
 app.use(express.static(path.join(__dirname, "/frontend")));
 
 app.get("*", (req, res) => {
